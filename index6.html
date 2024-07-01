@@ -1,0 +1,78 @@
+<style >body {
+    background-color: #f8f3d4;
+    color: #5b5b5b;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #ff6f61;
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e85c50;
+}
+
+.hidden {
+    display: none;
+}
+
+#specialMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff6f61;
+    transition: opacity 1s;
+}
+</style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor</title>
+ 
+</head>
+<body>
+    <div class="container">
+        <h1>Para Mi Amor</h1>
+        <p> Eres la persona más especial en mi vida y estoy agradecida de tenerte a mi lado.</p>
+          <p>Te agradezco todo lo que has hecho por mi ♥</p>
+          <p>Nunca olvides cuanto te amo </p>
+        <button id="showMessage">Haz clic para ver un mensaje especial</button>
+        <p id="specialMessage" class="hidden">Te amo con todo mi corazón. Gracias por ser tú.</p>
+    </div>
+    <script >document.getElementById('showMessage').addEventListener('click', function() {
+    const message = document.getElementById('specialMessage');
+    message.classList.toggle('hidden');
+    if (!message.classList.contains('hidden')) {
+        message.style.opacity = 0;
+        setTimeout(() => {
+            message.style.opacity = 1;
+        }, 10);
+    }
+});
+</script>
+</body>
+</html>
